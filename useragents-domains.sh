@@ -27,4 +27,10 @@ while(!feof($fp)) {
   }
 }
 
-print_r($uds);
+foreach($uds as $useragent=>$domains) {
+  echo urldecode($useragent)  . "\n";
+  foreach($domains as $domain) {
+    echo "  " . $domain . "\n";
+  }
+  echo "\n";
+}
